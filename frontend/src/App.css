@@ -116,13 +116,15 @@ body::after {
 .cta-container-desktop {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 32px;
+  margin-bottom: 24px;
 }
 
 .cta-button {
   position: relative;
-  font-family: 'La Belle Aurore', cursive;
-  font-size: 26px;
+  font-family: 'Playfair Display', serif;
+  font-size: 22px;
+  font-weight: 700;
+  font-style: italic;
   color: var(--brass);
   background: transparent;
   border: 2px solid var(--brass);
