@@ -1,0 +1,14 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="refresh" content="0; url=./index.html" />
+    <script>
+      // Hard redirect to index.html preserving path as a hash (optional)
+      const l = window.location;
+      const to = l.pathname.replace(/\/+$/, "") + l.search + l.hash;
+      window.location.replace("./index.html#" + to);
+    </script>
+  </head>
+  <body></body>
+</html>
