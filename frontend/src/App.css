@@ -115,7 +115,7 @@ body::after {
   height: 1px;
   position: relative;
   align-self: center;
-  margin-top: 8px;
+  margin-top: 14px;
 }
 
 .header-line::before {
