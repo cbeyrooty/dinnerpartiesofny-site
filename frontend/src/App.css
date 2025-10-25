@@ -946,18 +946,6 @@ body::after {
     display: none;
   }
 
-  .mobile-cta {
-    display: block;
-    position: fixed;
-    bottom: 24px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 100;
-    font-size: 18px;
-    padding: 12px 32px;
-    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.7);
-  }
-
   .hero-section {
     padding: 0 0 90px;
   }
@@ -1023,7 +1011,7 @@ body::after {
   }
   
   .site-footer {
-    padding: 60px 0 40px;
+    padding: 48px 0 36px;
   }
 }
 
