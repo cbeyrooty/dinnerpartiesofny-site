@@ -2,7 +2,7 @@ name: Deploy Dinner Parties (frontend -> GitHub Pages)
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -12,15 +12,13 @@ permissions:
 
 concurrency:
   group: "pages"
-  cancel-in-progress: false
+  cancel-in-progress: true
 
 jobs:
   build:
-    name: build
     runs-on: ubuntu-latest
     defaults:
       run:
-        shell: bash
         working-directory: frontend
 
     steps:
@@ -30,53 +28,53 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
-          cache: "npm"
-          cache-dependency-path: |
-            frontend/package-lock.json
-            frontend/npm-shrinkwrap.json
+          node-version: 20
+          # no cache-dependency-path here (prevents your error)
 
       - name: Normalize dependencies (date-fns + CI-friendly)
         run: |
-          # Make npm forgiving for peer conflicts in CI
-          npm config set legacy-peer-deps true
-          npm config set fund false
-          npm config set audit false
-
-          # If date-fns v4 was emitted by a generator, pin to v3 to satisfy react-day-picker
-          npm pkg set dependencies.date-fns="^3.6.0" || true
-
-          # Keep ESLint on the CRA-supported major (v8)
-          npm pkg set devDependencies.eslint="^8.57.1" || true
-
-          # Ajv/keywords versions that work with react-scripts' webpack toolchain
-          npm pkg set devDependencies.ajv="^6.12.6" || true
-          npm pkg set devDependencies.ajv-keywords="^3.5.2" || true
+          if [ -f package.json ]; then
+            # Pin date-fns to avoid react-day-picker peer conflicts
+            if ! jq -e '.overrides' package.json > /dev/null; then
+              tmp=$(mktemp)
+              jq '. + {overrides: {"date-fns":"3.6.0"}}' package.json > "$tmp" && mv "$tmp" package.json
+            else
+              tmp=$(mktemp)
+              jq '.overrides += {"date-fns":"3.6.0"}' package.json > "$tmp" && mv "$tmp" package.json
+            fi
+            cat package.json
+          fi
 
       - name: Install dependencies
-        run: npm install --no-audit --no-fund
+        run: |
+          if [ -f yarn.lock ]; then
+            npm config set legacy-peer-deps true
+            npm i -g yarn
+            yarn install --frozen-lockfile || yarn install
+          else
+            npm config set legacy-peer-deps true
+            npm install
+          fi
 
       - name: Build
         env:
-          # Ensures CRA builds assets with the right base for a project page
-          PUBLIC_URL: "/dinnerpartiesofny-site"
-          CI: "false"
+          CI: false
+          PUBLIC_URL: .
         run: |
-          if npm run build; then
-            echo "Build with npm OK"
-          else
-            echo "npm build failed; trying yarn if present"
-            yarn -v || true
-            yarn build || exit 1
+          if [ -f package.json ]; then
+            if jq -e '.scripts.build' package.json > /dev/null; then
+              npm run build || yarn build
+            else
+              echo "No build script found in frontend/package.json"; exit 1
+            fi
           fi
 
-      - name: Upload artifact
+      - name: Upload artifact (build folder)
         uses: actions/upload-pages-artifact@v3
         with:
           path: frontend/build
 
   deploy:
-    name: deploy
     needs: build
     runs-on: ubuntu-latest
     environment:
