@@ -156,10 +156,7 @@ body::after {
 
 /* CTA Button - Geometric Deco Style */
 .cta-container-desktop {
-  display: flex;
-  justify-content: flex-end;
-  margin-bottom: 16px;
-  padding: 0 0 8px;
+  display: none;
 }
 
 .cta-button {
