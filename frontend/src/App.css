@@ -106,7 +106,6 @@ body::after {
   justify-content: center;
   align-items: center;
   padding: 20px 0 16px;
-  background: #1A1A1A;
   gap: 32px;
   position: relative;
 }
