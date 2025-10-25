@@ -113,3 +113,12 @@ code {
         border-bottom-color: inherit;
     }
 }
+
+/* Hide watermark */
+[class*="watermark"],
+[class*="branding"],
+a[href*="emergent"] {
+    display: none !important;
+    visibility: hidden !important;
+    opacity: 0 !important;
+}
