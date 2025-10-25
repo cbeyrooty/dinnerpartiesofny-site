@@ -80,6 +80,34 @@ body::after {
   align-items: center;
   padding: 20px 0 16px;
   background: var(--espresso);
+  gap: 32px;
+  position: relative;
+}
+
+.header-line {
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--brass) 40%, var(--brass) 60%, transparent);
+  position: relative;
+}
+
+.header-line::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, rgba(212, 184, 122, 0.4) 40%, rgba(212, 184, 122, 0.4) 60%, transparent);
+  transform: translateY(-50%);
+  filter: blur(2px);
+}
+
+.header-line-left {
+  background: linear-gradient(90deg, transparent 0%, var(--brass) 70%, var(--brass-light) 100%);
+}
+
+.header-line-right {
+  background: linear-gradient(90deg, var(--brass-light) 0%, var(--brass) 30%, transparent 100%);
 }
 
 .site-logo {
@@ -87,6 +115,7 @@ body::after {
   width: 100%;
   height: auto;
   filter: drop-shadow(0 4px 16px rgba(0, 0, 0, 0.5));
+  flex-shrink: 0;
 }
 
 /* CTA Button - Geometric Deco Style */
