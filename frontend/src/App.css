@@ -437,7 +437,7 @@ body::after {
 
 /* Footer */
 .site-footer {
-  padding: 48px 0 40px;
+  padding: 32px 0 40px;
   text-align: center;
   margin-top: auto;
 }
@@ -446,7 +446,7 @@ body::after {
   display: flex;
   justify-content: center;
   gap: 48px;
-  margin-bottom: 32px;
+  margin-bottom: 28px;
 }
 
 .social-icon {
@@ -492,6 +492,10 @@ body::after {
 .social-icon:focus-visible {
   outline: 2px solid var(--brass);
   outline-offset: 6px;
+}
+
+.footer-cta {
+  margin: 24px 0;
 }
 
 .copyright {
