@@ -1219,11 +1219,9 @@ body::after {
     margin-bottom: 16px;
   }
   
-  .mobile-cta {
-    bottom: 16px;
-    right: 16px;
-    padding: 8px 24px;
+  .footer-cta {
     font-size: 15px;
+    padding: 8px 24px;
   }
 }
 
