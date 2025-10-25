@@ -870,7 +870,7 @@ body::after {
 /* Responsive Design */
 @media (max-width: 1400px) {
   .site-logo {
-    max-width: 450px;
+    max-width: 428px;
   }
   
   .site-header {
@@ -884,7 +884,7 @@ body::after {
   }
   
   .site-logo {
-    max-width: 420px;
+    max-width: 399px;
   }
   
   .site-header {
@@ -898,12 +898,16 @@ body::after {
   }
   
   .site-logo {
-    max-width: 380px;
+    max-width: 361px;
   }
   
   .site-header {
     padding: 16px 0 12px;
     gap: 20px;
+  }
+  
+  .header-line {
+    margin-top: 12px;
   }
   
   .hero-tagline {
@@ -919,11 +923,15 @@ body::after {
 
 @media (max-width: 900px) {
   .site-logo {
-    max-width: 340px;
+    max-width: 323px;
   }
   
   .site-header {
     gap: 16px;
+  }
+  
+  .header-line {
+    margin-top: 11px;
   }
   
   .video-frame-container {
@@ -948,12 +956,16 @@ body::after {
   }
 
   .site-logo {
-    max-width: 300px;
+    max-width: 285px;
   }
   
   .site-header {
     padding: 14px 0 10px;
     gap: 12px;
+  }
+  
+  .header-line {
+    margin-top: 10px;
   }
 
   .cta-container-desktop {
@@ -1036,11 +1048,15 @@ body::after {
 
 @media (max-width: 600px) {
   .site-logo {
-    max-width: 260px;
+    max-width: 247px;
   }
   
   .site-header {
     gap: 10px;
+  }
+  
+  .header-line {
+    margin-top: 9px;
   }
   
   .hero-tagline {
@@ -1076,12 +1092,16 @@ body::after {
   }
   
   .site-logo {
-    max-width: 240px;
+    max-width: 228px;
   }
   
   .site-header {
     padding: 12px 0 8px;
     gap: 8px;
+  }
+  
+  .header-line {
+    margin-top: 8px;
   }
   
   .hero-tagline {
@@ -1138,11 +1158,15 @@ body::after {
 
 @media (max-width: 380px) {
   .site-logo {
-    max-width: 220px;
+    max-width: 209px;
   }
   
   .site-header {
     gap: 6px;
+  }
+  
+  .header-line {
+    margin-top: 7px;
   }
   
   .hero-tagline {
