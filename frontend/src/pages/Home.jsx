@@ -9,11 +9,13 @@ const Home = () => {
     <div className="site-container">
       {/* Logo Header at Top */}
       <header className="site-header">
+        <div className="header-line header-line-left"></div>
         <img 
-          src="https://customer-assets.emergentagent.com/job_nyc-conversations/artifacts/eo9t60iu_Dinner%20Parties%20of%20NY%20logo.png" 
+          src="https://customer-assets.emergentagent.com/job_nyc-conversations/artifacts/ielq7dq8_Dinner%20Party%20Logo%20Small.png" 
           alt="Dinner Parties of New York"
           className="site-logo"
         />
+        <div className="header-line header-line-right"></div>
       </header>
 
       {/* CTA Button - Desktop */}
