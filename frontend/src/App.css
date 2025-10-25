@@ -116,7 +116,7 @@ body::after {
 .cta-container-desktop {
   display: flex;
   justify-content: flex-end;
-  margin-bottom: 24px;
+  margin-bottom: 20px;
 }
 
 .cta-button {
