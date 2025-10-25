@@ -1075,6 +1075,7 @@ body::after {
     font-size: 16px;
     padding: 10px 28px;
     bottom: 20px;
+    right: 20px;
   }
   
   .corner-chevron {
