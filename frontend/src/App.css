@@ -858,7 +858,7 @@ body::after {
 /* Responsive Design */
 @media (max-width: 1400px) {
   .site-logo {
-    max-width: 550px;
+    max-width: 750px;
   }
 }
 
@@ -868,7 +868,7 @@ body::after {
   }
   
   .site-logo {
-    max-width: 500px;
+    max-width: 650px;
   }
 }
 
@@ -878,7 +878,7 @@ body::after {
   }
   
   .site-logo {
-    max-width: 450px;
+    max-width: 550px;
   }
   
   .hero-tagline {
@@ -894,7 +894,7 @@ body::after {
 
 @media (max-width: 900px) {
   .site-logo {
-    max-width: 400px;
+    max-width: 480px;
   }
   
   .video-frame-container {
@@ -919,11 +919,11 @@ body::after {
   }
 
   .site-logo {
-    max-width: 320px;
+    max-width: 420px;
   }
 
   .deco-divider-top {
-    padding: 24px 0 16px;
+    padding: 20px 0 12px;
     gap: 16px;
   }
   
@@ -937,7 +937,7 @@ body::after {
   }
   
   .site-header {
-    padding: 12px 0 20px;
+    padding: 10px 0 14px;
   }
 
   .cta-container-desktop {
@@ -957,7 +957,7 @@ body::after {
   }
 
   .hero-section {
-    padding: 20px 0 100px;
+    padding: 18px 0 100px;
   }
 
   .hero-tagline {
@@ -1027,7 +1027,7 @@ body::after {
 
 @media (max-width: 600px) {
   .site-logo {
-    max-width: 280px;
+    max-width: 360px;
   }
   
   .hero-tagline {
@@ -1063,7 +1063,7 @@ body::after {
   }
   
   .site-logo {
-    max-width: 240px;
+    max-width: 300px;
   }
   
   .divider-line {
@@ -1072,6 +1072,11 @@ body::after {
   
   .deco-divider-top {
     gap: 12px;
+    padding: 16px 0 10px;
+  }
+  
+  .site-header {
+    padding: 8px 0 12px;
   }
   
   .hero-tagline {
@@ -1128,7 +1133,7 @@ body::after {
 
 @media (max-width: 380px) {
   .site-logo {
-    max-width: 200px;
+    max-width: 260px;
   }
   
   .hero-tagline {
@@ -1147,15 +1152,15 @@ body::after {
 /* Height-based responsive adjustments */
 @media (max-height: 700px) {
   .hero-section {
-    padding: 24px 0 60px;
+    padding: 20px 0 60px;
   }
   
   .site-header {
-    padding: 12px 0 16px;
+    padding: 10px 0 12px;
   }
   
   .deco-divider-top {
-    padding: 20px 0 12px;
+    padding: 16px 0 10px;
   }
   
   .hero-tagline {
@@ -1165,11 +1170,19 @@ body::after {
 
 @media (max-height: 600px) {
   .site-logo {
-    max-width: 300px;
+    max-width: 400px;
   }
   
   .hero-section {
-    padding: 16px 0 48px;
+    padding: 12px 0 48px;
+  }
+  
+  .deco-divider-top {
+    padding: 12px 0 8px;
+  }
+  
+  .site-header {
+    padding: 8px 0 10px;
   }
   
   .site-footer {
@@ -1180,19 +1193,19 @@ body::after {
 /* Landscape mobile optimization */
 @media (max-width: 900px) and (max-height: 500px) {
   .site-logo {
-    max-width: 220px;
+    max-width: 280px;
   }
   
   .deco-divider-top {
-    padding: 16px 0 8px;
+    padding: 10px 0 6px;
   }
   
   .site-header {
-    padding: 8px 0 12px;
+    padding: 6px 0 10px;
   }
   
   .hero-section {
-    padding: 12px 0 40px;
+    padding: 10px 0 40px;
   }
   
   .hero-tagline {
