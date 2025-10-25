@@ -7,14 +7,7 @@ const Home = () => {
 
   return (
     <div className="site-container">
-      {/* Art Deco Header Divider */}
-      <div className="deco-divider-top">
-        <div className="divider-line"></div>
-        <div className="divider-diamond"></div>
-        <div className="divider-line"></div>
-      </div>
-
-      {/* Logo Header */}
+      {/* Logo Header at Top */}
       <header className="site-header">
         <img 
           src="https://customer-assets.emergentagent.com/job_nyc-conversations/artifacts/eo9t60iu_Dinner%20Parties%20of%20NY%20logo.png" 
