@@ -23,7 +23,6 @@ const Invite = () => {
       ...prev,
       [name]: type === 'checkbox' ? checked : value
     }));
-    // Clear error when user starts typing
     if (errors[name]) {
       setErrors(prev => ({ ...prev, [name]: '' }));
     }
@@ -66,7 +65,7 @@ const Invite = () => {
     
     setIsSubmitting(true);
     
-    // Mock submission - will integrate with Google Forms later
+    // Mock submission - will integrate with Google Forms
     setTimeout(() => {
       console.log('Form submitted:', formData);
       navigate('/thank-you');
@@ -78,26 +77,41 @@ const Invite = () => {
   return (
     <div className="site-container">
       <div className="form-page">
+        {/* Deco Divider */}
+        <div className="deco-divider-top">
+          <div className="divider-line"></div>
+          <div className="divider-diamond"></div>
+          <div className="divider-line"></div>
+        </div>
+
         <button 
           className="back-button"
           onClick={() => navigate('/')}
           aria-label="Back to home"
         >
-          <ArrowLeft size={20} />
-          <span>Back</span>
+          <ArrowLeft size={18} strokeWidth={2} />
+          <span>BACK</span>
         </button>
 
         <div className="form-panel">
+          {/* Corner Ornaments */}
+          <div className="form-corner form-corner-tl"></div>
+          <div className="form-corner form-corner-tr"></div>
+          <div className="form-corner form-corner-bl"></div>
+          <div className="form-corner form-corner-br"></div>
+
           <div className="form-header">
-            <h1 className="form-title">Request an invite</h1>
-            <div className="brass-accent-line"></div>
+            <h1 className="form-title">REQUEST AN INVITE</h1>
+            <div className="title-underline">
+              <div className="underline-diamond"></div>
+            </div>
             <p className="form-helper">Tell us who you are and the perspective you bring.</p>
           </div>
 
           <form onSubmit={handleSubmit} className="invite-form">
             <div className="form-group">
               <label htmlFor="name" className="form-label">
-                Name <span className="required">*</span>
+                NAME <span className="required">*</span>
               </label>
               <input
                 type="text"
@@ -119,7 +133,7 @@ const Invite = () => {
 
             <div className="form-group">
               <label htmlFor="email" className="form-label">
-                Email <span className="required">*</span>
+                EMAIL <span className="required">*</span>
               </label>
               <input
                 type="email"
@@ -141,7 +155,7 @@ const Invite = () => {
 
             <div className="form-group">
               <label htmlFor="bio" className="form-label">
-                Short Bio <span className="required">*</span>
+                SHORT BIO <span className="required">*</span>
               </label>
               <textarea
                 id="bio"
@@ -199,7 +213,7 @@ const Invite = () => {
               className="submit-button"
               disabled={isSubmitting}
             >
-              {isSubmitting ? 'Submitting...' : 'Request an invite'}
+              {isSubmitting ? 'SUBMITTING...' : 'REQUEST AN INVITE'}
             </button>
           </form>
         </div>
