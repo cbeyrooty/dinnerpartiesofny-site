@@ -167,6 +167,13 @@ const Home = () => {
           </a>
         </div>
         
+        <button 
+          className="cta-button footer-cta"
+          onClick={() => navigate('/invite')}
+        >
+          <span className="cta-text">Get invited</span>
+        </button>
+        
         <p className="copyright">© {new Date().getFullYear()} DINNER PARTIES OF NEW YORK</p>
       </footer>
     </div>
