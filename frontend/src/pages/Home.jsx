@@ -140,18 +140,6 @@ const Home = () => {
 
       {/* Footer */}
       <footer className="site-footer">
-        <div className="footer-divider">
-          <div className="divider-line"></div>
-          <div className="divider-center-ornament">
-            <div className="diamond-stack">
-              <div className="diamond diamond-1"></div>
-              <div className="diamond diamond-2"></div>
-              <div className="diamond diamond-3"></div>
-            </div>
-          </div>
-          <div className="divider-line"></div>
-        </div>
-        
         <div className="social-icons">
           <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="social-icon">
             <div className="icon-frame">
