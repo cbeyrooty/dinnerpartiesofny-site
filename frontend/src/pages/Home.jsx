@@ -141,24 +141,24 @@ const Home = () => {
       {/* Footer */}
       <footer className="site-footer">
         <div className="social-icons">
-          <a href="http://instagram.com/convivium.nyc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="social-icon">
+          <a href="http://instagram.com/convivium.nyc/" target="_blank" className="social-icon">
             <div className="icon-frame">
               <Instagram size={20} strokeWidth={1.5} />
             </div>
           </a>
-          <a href="https://www.youtube.com/@Conviviumnyc" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="social-icon">
+          <a href="https://www.youtube.com/@Conviviumnyc" target="_blank" className="social-icon">
             <div className="icon-frame">
               <Youtube size={20} strokeWidth={1.5} />
             </div>
           </a>
-          <a href="https://x.com" target="_blank" rel="noopener noreferrer" aria-label="X" className="social-icon">
+          <a href="https://x.com" target="_blank" className="social-icon">
             <div className="icon-frame">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
                 <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
               </svg>
             </div>
           </a>
-          <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok" className="social-icon">
+          <a href="https://tiktok.com" target="_blank" className="social-icon">
             <div className="icon-frame">
               <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
                 <path d="M9 12a4 4 0 1 0 4 4V4a5 5 0 0 0 5 5" />
