@@ -103,8 +103,8 @@ const Home = () => {
               <div className="video-inner-frame">
                 <div className="video-wrapper">
                   <iframe
-                    src="https://www.youtube.com/embed/i1841azegyk?autoplay=1&mute=0"
-                    title="Dinner Parties of New York - Latest Episode"
+                    src="https://www.youtube.com/embed/YvEXITF-tUY?autoplay=1&mute=0"
+                    title="Convivium NYC - Latest Episode"
                     frameBorder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                     allowFullScreen
