@@ -141,12 +141,12 @@ const Home = () => {
       {/* Footer */}
       <footer className="site-footer">
         <div className="social-icons">
-          <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="social-icon">
+          <a href="http://instagram.com/convivium.nyc/" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="social-icon">
             <div className="icon-frame">
               <Instagram size={20} strokeWidth={1.5} />
             </div>
           </a>
-          <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="social-icon">
+          <a href="https://www.youtube.com/@Conviviumnyc" target="_blank" rel="noopener noreferrer" aria-label="YouTube" className="social-icon">
             <div className="icon-frame">
               <Youtube size={20} strokeWidth={1.5} />
             </div>
