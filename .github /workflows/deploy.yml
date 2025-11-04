@@ -1,9 +1,8 @@
-name: Deploy DinnerPartiesOfNY (frontend -> GitHub Pages)
+name: Deploy DinnerParties Site (frontend -> GitHub Pages)
 
 on:
   push:
     branches: [ main ]
-
 
 permissions:
   contents: read
@@ -17,6 +16,7 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -31,18 +31,18 @@ jobs:
         shell: bash
         run: |
           set -e
-          # always use npm in CI
+          # Always use npm in CI (avoid yarn cache/lock surprises)
           if [ -f yarn.lock ]; then rm -f yarn.lock; fi
           npm config set legacy-peer-deps true
 
-          # react-day-picker@8 requires date-fns ^2 or ^3 (not v4)
+          # 1) react-day-picker@8 needs date-fns ^2 || ^3 (NOT 4)
           npm pkg set "dependencies.date-fns=3.6.0"
 
-          # CRA v5 expects ESLint 8.x
+          # 2) CRA v5 wants ESLint 8.x (avoid ESLint 9 pulled by tooling)
           npm pkg set "devDependencies.eslint=8.57.1"
           npm pkg set "devDependencies.@eslint/js=8.57.1"
 
-          # Webpack/terser toolchain wants Ajv v8 + ajv-keywords v5
+          # 3) Webpack/terser toolchain expects Ajv v8 + ajv-keywords v5
           npm pkg set "devDependencies.ajv=^8"
           npm pkg set "devDependencies.ajv-keywords=^5"
 
