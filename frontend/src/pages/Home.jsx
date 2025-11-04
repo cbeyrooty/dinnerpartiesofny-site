@@ -174,7 +174,7 @@ const Home = () => {
           <span className="cta-text">Get invited</span>
         </button>
         
-        <p className="copyright">© {new Date().getFullYear()} DINNER PARTIES OF NEW YORK</p>
+        <p className="copyright">© 2025 Convivium NYC</p>
       </footer>
     </div>
   );
