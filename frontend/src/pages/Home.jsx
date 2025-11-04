@@ -11,7 +11,7 @@ const Home = () => {
       <header className="site-header">
         <div className="header-line header-line-left"></div>
         <img 
-          src="https://customer-assets.emergentagent.com/job_manhattan-deco/artifacts/ami214pi_Convivium%20NYC%20logo-2.png" 
+          src="https://customer-assets.emergentagent.com/job_manhattan-deco/artifacts/dpzkz6w4_Convivium%20NYC%20logo-2.png" 
           alt="Convivium NYC"
           className="site-logo"
         />
